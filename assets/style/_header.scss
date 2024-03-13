@@ -1,0 +1,214 @@
+.header{
+   @media screen and (max-width:1023px) {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $--black;
+   }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        padding: 9px 0 10px 0;
+        &-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 7px;
+            position: relative;
+            &:after{
+                content: '';
+                width:100%;
+                height: 1px;
+                background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+            @media screen and (max-width:1023px) {
+                display: none;
+                // align-items: baseline;
+            }
+            .header__container-bottom-wrapper &{
+                display: none;
+                @media screen and (max-width:1023px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            &-socials{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                max-width: fit-content;
+                min-width: fit-content;
+                @media screen and (max-width:1023px) {
+                    // align-items: baseline;
+                }
+                & a{
+                    min-width: fit-content;
+                    transition: all .3s ease;
+                    @media (hover:hover) and (pointer:fine){
+                        &:hover{
+                            color: $--redHover;
+                            & svg circle{
+                                fill: $--redHover;
+                                stroke: $--redHover;
+                            }
+                        }
+                }
+                }
+            }
+            &-contacts{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @media screen and (max-width:1023px) {
+                    flex-direction: column;
+                    // align-items: baseline;
+                }
+                & span,
+                & a{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    cursor: pointer;
+                    transition: all .3s ease;
+                    @media (hover:hover) and (pointer:fine){
+                        &:hover{
+                            color: $--redHover;
+                            & svg circle{
+                                fill: $--white;
+                            }
+                            & svg path{
+                                fill: $--redHover;
+                                // stroke: $--white;
+                            }
+                        }
+                }
+                @media screen and (max-width:367px) {
+                    word-break: break-all;
+                }
+                
+            }
+        }
+    }
+    &-bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        &-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 75%;
+            width: 100%;
+            @media screen and (max-width:1100px) {
+                gap: 35px;
+            }
+            @media screen and (max-width:1023px) {
+                position: fixed;
+                top: 67px;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                transform: translateX(-100%);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                max-width: 100%;
+                z-index: 50;
+                background-color: $--black;
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+            & nav{
+                & ul{
+                    display: flex;
+                    gap: 40px;
+                    align-items: center;
+                    @media screen and (max-width:1100px) {
+                        gap: 35px;
+                    }
+                    @media screen and (max-width:1023px) {
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+                    @media screen and (max-width:367px) {
+                        word-break: break-all;
+                    }
+
+                }
+            }
+            & .btn{
+                max-width: 200px;
+                padding: 10px 20px;
+            }
+        }
+        & .menuBtns{
+            display: none;
+
+            @media  screen and (max-width:1023px) {
+                display: block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 14px;
+                right: 20px;
+                background-color: $--red;
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                .icon {
+                    width: 20px;
+                    height: 1.5px;
+                    background: $--black;
+                    position: absolute;
+                    top: 20px;
+                    left: 10px;
+                    transition: .3s ease;
+
+                    &::after,
+                    &::before
+                    {
+                        width: 20px;
+                        height: 1.5px;
+                        background: $--black;
+                        position: absolute;
+                        left: 0;
+                        content: "";
+                        transition: .3s ease;
+                      }
+                    &::after {
+                        top: 6px;
+                      }
+                      &::before {
+                        top: -6px;
+                      }
+
+                      .open &:before {
+                        display: none;
+                      }
+                                       
+                      .open &::after {
+                        transform: rotate(-90deg);
+                        width: 30px;
+                        top: 0;
+                      }
+                      .open & {
+                        transform: rotate(45deg);
+                        width: 30px;
+                        left: 6px;
+                      }
+                  }
+            }
+        }
+    }
+}
+}

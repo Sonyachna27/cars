@@ -1,0 +1,62 @@
+.main{
+    background: url(../image/mian.png) center center / cover no-repeat ;
+    position: relative;
+    padding: 75px 0; 
+
+    &__container {
+        padding: 250px 69px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+        $border: 5px;
+        background: transparent;
+        background-clip: padding-box; 
+        border: solid $border transparent; 
+       &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        height: 99%;
+        mask-image: linear-gradient(137deg, transparent 5%, rgba(0, 0, 0, 1) 74%, rgba(0, 0, 0, 1) 0%, transparent 95%);    
+        border-image: linear-gradient(18deg,#0D0D0D -100%,#5A5A5E 100%,  );
+        border-radius: inherit;
+        border-image-slice: 5 5 5 5;
+        border-image-width: 5px 5px 5px 5px;
+        border-image-outset: 0px 0px 0px 0px;
+        border-image-repeat: stretch stretch;
+        z-index: 0;
+        box-sizing: border-box;
+       }
+
+       @media screen and (max-width:1023px) {
+        height: 100dvh;
+        padding: 0 30px;
+        
+       }
+        &-content{
+            position: relative;
+            z-index: 1;
+            & h1{
+                margin-bottom: 10px;
+                @media screen and (max-width:550px) {
+                    font-size: 42px;
+                }
+            }
+            & p{
+                margin-bottom: 40px;
+            }
+            & .btn{
+                max-width: 250px;
+                @media screen and (max-width:550px) {
+                    max-width: calc(100% - 57px);
+                }
+            }
+        }
+    }
+}
