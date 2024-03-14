@@ -58,18 +58,27 @@ h1{
     font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
+    @media screen and (max-width:367px) {
+        font-size: 45px;
+    }
 }
 h2{
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    @media screen and (max-width:367px) {
+        font-size: 30px;
+    }
 }
 h3{
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    @media screen and (max-width:367px) {
+        font-size: 20px;
+    }
 }
 h1 span,
 h2 span,
@@ -151,12 +160,18 @@ h3 span{
     justify-content: space-between;
     gap: 15px;
     margin-bottom: 40px;
+    & h2{
+        max-width: 640px;
+    }
     & span{
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         color: $--silver;
+        @media screen and (max-width:367px) {
+            font-size: 16px;
+        }
     }
     @media screen and (max-width:767px) {
         flex-direction: column;

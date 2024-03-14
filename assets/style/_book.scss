@@ -1,0 +1,114 @@
+.book{
+    &__container{
+        padding: 80px;
+        background-color: $--gray-bg;
+        border-radius: 30px;
+        @media screen and (max-width:1023px) {
+            padding: 40px;
+        }
+        @media screen and (max-width:550px) {
+            padding: 20px;
+        }
+        &-form{
+           & form{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+            width: 100%;
+            gap: 20px;
+            & span{
+            width: 100%;
+            }
+            & label{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 48%;
+                @media screen and (max-width:767px) {
+                    width: 100%;
+                }
+                &:has(textarea) {
+                    width: 100%;
+                }
+               
+            }
+
+            .file-upload input[type="file"]{
+
+                display: none;
+                
+                }
+                
+                .file-upload {                
+                position: relative;
+                overflow: hidden;
+                max-width: 203px;
+                width: 100%;
+                    max-height: 60px;
+                    height: 100%;
+                    min-height: 100%;
+                border-radius: 10px;
+                border: 1px solid $--silver;
+                background: #D9D9D9;
+                padding: 14px 20px;
+                color: $--silver;
+                & label{
+                    display: flex;
+                    flex-direction: row;
+                      color: $--silver;
+                      width: 100%;
+                      align-items: center;
+                      & svg{
+                          width: 32px;
+                          height: 32px;
+                      }
+                      gap: 10px;
+                      cursor: pointer;
+                      & span {
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            
+                            }
+                }
+                }
+             
+            & input:not([type="submit"]),
+            & textarea{
+            padding: 19px;
+            border: 1px solid $--silver;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            gap: 10px;
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+            transition: .3s ease;
+            color: $--white;
+            &:hover{
+                border-color: #EFEFEF;
+               
+               &::placeholder{
+                color: $--white;
+               } 
+            }
+            &::placeholder{
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                color: $--silver;
+            }
+            }
+          
+            & textarea{
+                width: 100%;
+                resize: none;
+                min-height: 233px;
+            }
+           }
+        }
+    }
+}
