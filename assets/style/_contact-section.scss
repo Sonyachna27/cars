@@ -1,0 +1,119 @@
+.contact{
+    &__container{
+        display: flex;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $--gray-bg;
+        gap: 60px;
+      @media screen and (max-width:1023px) {
+        flex-direction: column;
+      }
+        & img{
+            width: 34%;
+            border-radius: 0 30px 30px 0;
+            object-fit: cover;
+            height: auto;
+            @media screen and (max-width:1023px) {
+                width: 100%;
+                max-height: 450px;
+                border-radius: 30px;
+            }
+    }
+    &-communication{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 57%;
+        gap: 60px;
+       margin-left: 60px;
+
+        @media screen and (max-width:1023px) {
+           max-width: 100%;
+           width: 100%;
+           padding: 30px;
+           margin-left: 0;
+        }
+        @media screen and (max-width:767px) {
+            gap: 30px;
+        }
+        &-contacts{
+            display: flex;
+            gap: 60px;
+            @media screen and (max-width:1240px) {
+                gap: 25px;
+            }
+            @media screen and (max-width:1023px) {
+                flex-wrap: wrap;
+            }
+            & span,
+            & a{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                & span{
+                    color: #BDBDBD;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal
+                }
+            }
+        }
+        &-social{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        & span{
+            color: #BDBDBD;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }   
+         &-wrap{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: calc(100% - 47px);
+            width: 100%;
+            @media screen and (max-width:767px) {
+                flex-wrap: wrap;
+                max-width: 100%;
+            }
+            & .circle{
+                width: 25.7%;
+                background-color: transparent;
+                border-color: $--white;
+                padding: 15px;
+                @media screen and (max-width:767px) {
+                   max-width: calc(100% - 47px);
+                   width: 100%;
+                }
+                &:hover {
+                    background-color: $--redHover;
+                    border-color: transparent;
+                    &::after{
+                        background-color: inherit;
+                        border-color: transparent;
+                    }
+                }
+                &:after{
+                    background-color: transparent;
+                    border-color: $--white;
+                    max-width: 47px;
+                    max-height: 47px;
+                    right: -72px;
+                }
+             }
+         }
+         
+        }
+    }
+}
+}
