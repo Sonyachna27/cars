@@ -1,0 +1,128 @@
+.faq{
+   
+      &__container{
+          &-accord {
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 40px;
+             
+              &-item {
+                  max-width: 100%;
+                  width: 100%;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  transition:all .3s linear;
+                  position: relative;
+                  color: $--silver;
+                  &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
+                  }
+                  &:nth-of-type(1){
+                    &:before{
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 1px;
+                      background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
+                    }
+                  }
+                  &-top {
+                      max-width: 100%;
+                     
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      gap: 20px;
+                      justify-content: space-between;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: normal;
+                      font-size: 24px;
+                      padding: 40px;
+                      @media screen and (max-width:767px) {
+                        padding: 30px 20px;
+                        gap: 30px;
+                        font-size: 20px;  
+                      }
+                      @media screen and (max-width:367px) {
+                        gap: 10px;
+                        font-size: 18px; 
+                        padding: 20px 10px;
+                        word-wrap: break-word;
+                          overflow-wrap: break-word;
+                          white-space: normal; 
+                          white-space: pre-wrap;
+                          font-size: 16px;
+                      }
+                      & p{
+                        max-width: 530px;
+                          word-wrap: break-word;
+                          overflow-wrap: break-word;
+                          white-space: normal; 
+                          white-space: pre-wrap;
+                          @media screen and (max-width:367px) {
+                            overflow-wrap: anywhere;
+                          }
+                      }
+               & svg{
+              max-width: 50px;
+              max-height: 50px;
+              width: 100%;
+              height: 100%;            
+              margin-right: 5px;
+              transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+              @media screen and (max-width:767px) {
+                max-width: 30px;
+              max-height: 30px;
+              }
+               }                    
+                    }
+                  &-bottom {
+                      opacity: 0;
+                      max-height: 0;
+                      overflow: hidden;
+                      transition: all .3s linear;
+                      padding: 0px 30px 0px 0px;
+                    }
+                   
+                }
+                .faq__container-accord-item:hover,
+                .faq__container-accord-item.active {
+                  color: $--white;
+                }
+                .faq__container-accord-item.active .faq__container-accord-item-bottom {
+                  opacity: 1;
+                  max-height: 100vh;
+                  overflow: visible;
+                  padding: 30px 30px 30px 90px ;
+                  border-radius: 0 0 10px 10px;
+                  font-size: 24px;
+                  @media screen and (max-width:767px) {
+                    padding: 20px;
+                    font-size: 20px;
+                  }
+                  @media screen and (max-width:367px) {
+                    padding: 10px;
+                    font-size: 16px;
+                  }
+                }
+                .faq__container-accord-item:hover .faq__container-accord-item-top svg line{
+                  stroke: $--white;
+                }
+         
+        
+                .faq__container-accord-item.active  .faq__container-accord-item-top svg {
+              transform: rotate(45deg);
+                }
+      
+            }
+      }
+  }

@@ -1,9 +1,13 @@
+window.addEventListener('DOMContentLoaded', () =>{
 const burgerBtn = document.querySelector('.menuBtns');
 const headerWrapperMobile = document.querySelector('.header__container-bottom-wrapper')
 burgerBtn.addEventListener('click', () =>{
     headerWrapperMobile.classList.toggle('open');
 });
-const reviewsSlider = new Swiper('.reviewsSlider', {
+
+const reviewsSliderWrap = document.querySelector('.reviewsSlider');
+if(reviewsSliderWrap){
+  const reviewsSlider = new Swiper('.reviewsSlider', {
     slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
@@ -27,3 +31,33 @@ const reviewsSlider = new Swiper('.reviewsSlider', {
   }
 
   });
+}
+const accordionItemsFaq = document.querySelectorAll('.faq__container-accord-item');
+if(accordionItemsFaq){
+  accordionItemsFaq.forEach(item => {
+    item.addEventListener('click', function() {
+      this.classList.toggle('active');
+    });
+  });
+}
+
+function getFileName() {
+  const fileInput = document.querySelector('.fileInput'); 
+  const files = fileInput.files;
+  const fileNames = [];
+  
+  for (let i = 0; i < files.length; i++) {
+    const fileName = files[i].name;
+    fileNames.push(fileName);
+  }
+
+  const fileNameElement = document.querySelector('.file-name');
+  if (fileNameElement) {
+    fileNameElement.innerHTML = 'Foto: ' + fileNames.join(', '); 
+  }
+}
+
+const fileInput = document.querySelector('.fileInput');
+    fileInput.addEventListener('change', getFileName);
+
+});
