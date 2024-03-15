@@ -15,12 +15,10 @@
             display: flex;
             flex-direction: column;
             padding: 80px 0 60px 0;
-
             position: relative;
             @media screen and (max-width:1240px) {
                 padding: 60px 0;
             }
-           
             @media screen and (max-width:767px) {
                 padding: 30px 0px;
             }
@@ -93,7 +91,6 @@
                     @media screen and (max-width:1023px) {
                         align-items: center;
                     }
-                   
                     }
                     & nav{
                         margin: 0 auto;
@@ -123,11 +120,13 @@
                &-socials{
                 @media screen and (max-width:1023px) {
                     flex-direction: column;
+                    align-items: baseline;
                 }
                 .circle{
                     width: calc(33% - 47px );
                     @media screen and (max-width:1023px) {
                         width: calc(100% - 47px );
+                        width: 100%;
                     }
                 }
                }

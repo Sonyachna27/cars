@@ -1,8 +1,13 @@
 window.addEventListener('DOMContentLoaded', () =>{
-const burgerBtn = document.querySelector('.menuBtns');
-const headerWrapperMobile = document.querySelector('.header__container-bottom-wrapper')
-burgerBtn.addEventListener('click', () =>{
-    headerWrapperMobile.classList.toggle('open');
+
+const menuBtn = document.querySelector('.menuBtns');
+const htmlElement = document.querySelector('html');
+const navLinks = document.querySelectorAll('nav a');
+  menuBtn.addEventListener('click' , () => document.querySelector('html').classList.toggle('open'));
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        htmlElement.classList.remove('open');
+    });
 });
 
 const reviewsSliderWrap = document.querySelector('.reviewsSlider');
