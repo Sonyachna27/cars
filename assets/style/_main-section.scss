@@ -1,3 +1,5 @@
+
+
 .main{
     background: url(../image/mian.png) center center / cover no-repeat ;
     position: relative;
@@ -11,29 +13,32 @@
         max-width: 100%;
         width: 100%;
         height: 100%;
-        border-radius: 40px;
-        $border: 5px;
-        background: transparent;
-        background-clip: padding-box; 
-        border: solid $border transparent; 
-       &:before{
+       overflow: hidden;
+       z-index: 0;
+   
+       & i{
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 99%;
-        height: 99%;
-        mask-image: linear-gradient(137deg, transparent 5%, rgba(0, 0, 0, 1) 74%, rgba(0, 0, 0, 1) 0%, transparent 95%);    
-        mask-image: linear-gradient(137deg, transparent 11%, rgb(0, 0, 0) 42%, rgb(0, 0, 0) 0%, transparent 108%);    
+        z-index: -1;
+        inset: 0;
+        border-radius: 30px;
+        padding: 5px; 
+        -webkit-mask: 
+           linear-gradient(#fff 0 0) content-box, 
+           linear-gradient(#fff 0 0); 
+        -webkit-mask-composite: xor; 
+        mask-composite: exclude; 
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(163deg,  #0D0D0D -43%, #5A5A5E 65%, #0D0D0D 85%);
         
-        border-image: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
-        border-radius: inherit;
-        border-image-slice: 5 5 5 5;
-        border-image-width: 5px 5px 5px 5px;
-        border-image-outset: 0px 0px 0px 0px;
-        border-image-repeat: stretch stretch;
-        z-index: 0;
-        box-sizing: border-box;
+            transition: transform .7s linear;
+          }
        }
 
        @media screen and (max-width:1023px) {
