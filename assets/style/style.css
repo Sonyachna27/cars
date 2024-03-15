@@ -80,6 +80,11 @@ button {
 }
 @font-face {
   font-family: "Inter";
+  src: url(../fonts/Inter-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Inter";
   src: url(../fonts/Inter-SemiBold.ttf);
   font-weight: 600;
 }
@@ -508,7 +513,7 @@ h3 span {
 }
 
 .main {
-  background: url(../image/mian.png) center center/cover no-repeat;
+  background: url(../image/main.jpg) center center/cover no-repeat;
   position: relative;
   padding: 75px 0;
 }
@@ -528,21 +533,12 @@ h3 span {
   position: absolute;
   z-index: -1;
   inset: 0;
-  border-radius: 30px;
+  border-radius: 40px;
   padding: 5px;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-}
-.main__container i::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(163deg, #0D0D0D -43%, #5A5A5E 65%, #0D0D0D 85%);
-  transition: transform 0.7s linear;
+  background: linear-gradient(104.47deg, rgba(13, 13, 13, 0) 0.46%, #5A5A5E 49.23%, rgba(13, 13, 13, 0) 100%) border-box;
 }
 @media screen and (max-width: 1023px) {
   .main__container {
@@ -571,6 +567,7 @@ h3 span {
 }
 .main__container-content p {
   margin-bottom: 40px;
+  font-size: 20px;
 }
 .main__container-content .btn {
   max-width: 250px;
@@ -699,6 +696,7 @@ h3 span {
   padding: 60px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 @media screen and (max-width: 1240px) {
   .about__container-content {
@@ -1164,13 +1162,26 @@ h3 span {
   opacity: 1;
   max-height: 100vh;
   overflow: visible;
-  padding: 30px 30px 30px 90px;
+  padding: 30px;
   border-radius: 0 0 10px 10px;
-  font-size: 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq__container-accord .faq__container-accord-item.active .faq__container-accord-item-bottom p {
+  max-width: 530px;
+  font-weight: 500;
+}
+@media screen and (max-width: 367px) {
+  .faq__container-accord .faq__container-accord-item.active .faq__container-accord-item-bottom p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 767px) {
   .faq__container-accord .faq__container-accord-item.active .faq__container-accord-item-bottom {
     padding: 20px;
+    padding: 30px 74px;
     font-size: 20px;
   }
 }
@@ -1413,6 +1424,16 @@ h3 span {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.footer__container-wrap-links-item-contacts svg {
+  min-width: 47px;
+  min-height: 47px;
+}
+@media screen and (max-width: 367px) {
+  .footer__container-wrap-links-item-contacts svg {
+    min-width: 37px;
+    min-height: 37px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .footer__container-wrap-links-item-contacts {

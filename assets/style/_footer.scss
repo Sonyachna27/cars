@@ -84,6 +84,14 @@
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
+                    & svg{
+                        min-width: 47px;
+                        min-height: 47px;
+                        @media screen and (max-width:367px) {
+                            min-width: 37px;
+                            min-height: 37px;
+                        }
+                    }
                     @media screen and (max-width:1200px) {
                         font-size: 22px;
                     }

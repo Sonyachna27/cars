@@ -3,11 +3,11 @@
     src: url(../fonts/Inter-Regular.ttf);
     font-weight: 400;
 }
-// @font-face {
-//     font-family: "Inter";
-//     src: url(../fonts/Inter-Medium.ttf);
-//     font-weight: 500;
-// }
+@font-face {
+    font-family: "Inter";
+    src: url(../fonts/Inter-Medium.ttf);
+    font-weight: 500;
+}
 @font-face {
     font-family: "Inter";
     src: url(../fonts/Inter-SemiBold.ttf);
@@ -127,7 +127,7 @@ h3 span{
         right: -84px;
         top: 0;
         transform: translate(-50%, 0%);
-        background-color: #CD292A;
+        background-color: $--red;
         background-image: url(../image/Arrow.svg);
         background-position: center;
         background-repeat: no-repeat;
@@ -135,11 +135,12 @@ h3 span{
     }
     &:hover{
         &:after{
-            background-color: #991B1C;
+            background-color: $--redHover;
         }
     }
 }
 .circle-instagram{
+  
     &:after{
         background-image: url(../image/instagram.svg);
     }

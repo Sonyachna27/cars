@@ -102,11 +102,23 @@
                   opacity: 1;
                   max-height: 100vh;
                   overflow: visible;
-                  padding: 30px 30px 30px 90px ;
+                  padding: 30px;
                   border-radius: 0 0 10px 10px;
-                  font-size: 24px;
+                  font-size: 16px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  & p{
+                    max-width: 530px;
+                    font-weight: 500;
+                    @media screen and (max-width:367px) {
+                      font-size: 14px;
+                    }
+                  }
                   @media screen and (max-width:767px) {
                     padding: 20px;
+                    padding: 30px 74px;
                     font-size: 20px;
                   }
                   @media screen and (max-width:367px) {
