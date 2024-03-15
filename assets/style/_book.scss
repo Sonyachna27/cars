@@ -34,9 +34,7 @@
             }
 
             .file-upload input[type="file"]{
-
                 display: none;
-                
                 }
                 
                 .file-upload {                
@@ -101,12 +99,12 @@
                 line-height: normal;
                 color: $--silver;
             }
-            }
-          
+            }          
             & textarea{
                 width: 100%;
                 resize: none;
                 min-height: 233px;
+                color: $--silver;
             }
            }
         }
