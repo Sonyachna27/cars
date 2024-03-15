@@ -1,7 +1,7 @@
 
 
 .main{
-    background: url(../image/mian.png) center center / cover no-repeat ;
+    background: url(../image/main.jpg) center center / cover no-repeat ;
     position: relative;
     padding: 75px 0; 
 
@@ -21,26 +21,15 @@
         position: absolute;
         z-index: -1;
         inset: 0;
-        border-radius: 30px;
+        border-radius: 40px;
         padding: 5px; 
         -webkit-mask: 
            linear-gradient(#fff 0 0) content-box, 
            linear-gradient(#fff 0 0); 
         -webkit-mask-composite: xor; 
         mask-composite: exclude; 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(163deg,  #0D0D0D -43%, #5A5A5E 65%, #0D0D0D 85%);
-        
-            transition: transform .7s linear;
-          }
+        background: linear-gradient(104.47deg, rgba(13, 13, 13, 0) 0.46%, #5A5A5E 49.23%, rgba(13, 13, 13, 0) 100%) border-box;
        }
-
        @media screen and (max-width:1023px) {
         height: 100dvh;
         padding: 0 30px;
@@ -62,6 +51,7 @@
             }
             & p{
                 margin-bottom: 40px;
+                font-size: 20px;
             }
             & .btn{
                 max-width: 250px;
