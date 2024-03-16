@@ -27,10 +27,12 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                @media screen and (max-width:1023px) {
+                    display: none;
+                }
             }
             @media screen and (max-width:1023px) {
                 display: none;
-                // align-items: baseline;
             }
             .header__container-bottom-wrapper &{
                 display: none;
@@ -45,9 +47,7 @@
                 gap: 5px;
                 max-width: fit-content;
                 min-width: fit-content;
-                @media screen and (max-width:1023px) {
-                    // align-items: baseline;
-                }
+               
                 & a{
                     min-width: fit-content;
                     transition: all .3s ease;
@@ -76,16 +76,16 @@
                     gap: 5px;
                     cursor: pointer;
                     transition: all .3s ease;
+                    & svg{
+                        transition: all .3s linear;
+                    }
                     @media (hover:hover) and (pointer:fine){
                         &:hover{
-                            color: $--redHover;
+                            
                             & svg circle{
-                                fill: $--white;
-                            }
-                            & svg path{
                                 fill: $--redHover;
-                                
                             }
+                           
                         }
                 }
                 @media screen and (max-width:367px) {
