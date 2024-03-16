@@ -32,7 +32,7 @@
         }
           
             &-wrap{
-               gap: 60px;
+                    gap: 60px;
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 60px;
@@ -44,7 +44,7 @@
                         margin-bottom: 40px;
                         gap: 40px;
                     }
-                     
+                    
 
                &-links{
                 display: flex;
@@ -52,13 +52,16 @@
                 gap: 105px;
                 justify-content: space-between;
                 @media screen and (max-width:1023px) {
-                   flex-direction: column; 
+                   
                    gap: 40px;
+                }
+                @media screen and (max-width:767px) {
+                   flex-direction: column; 
                 }
                 & .logo{
                     max-width: 160px;
                     width: 100%;
-                    @media screen and (max-width:1023px) {
+                    @media screen and (max-width:767px) {
                         margin: 0 auto;
                     }
                 }
@@ -74,7 +77,7 @@
                     @media screen and (max-width:1200px) {
                         gap: 40px;
                     }
-                    @media screen and (max-width:1023px) {
+                    @media screen and (max-width:767px) {
                         flex-direction: column; 
                         
                      }
@@ -116,7 +119,7 @@
                     }
                     }
                     & nav{
-                        // margin: 0 auto;
+                        
                         & ul{
                             display: flex;
                             flex-direction: column;
@@ -139,15 +142,14 @@
                 }
                }
                &-socials{
-                @media screen and (max-width:1023px) {
+                @media screen and (max-width:767px) {
                     flex-direction: column;
                     align-items: baseline;
-                    
                 }
              
                 .circle{
                     width: calc(33% - 47px );
-                    @media screen and (max-width:1023px) {
+                    @media screen and (max-width:767px) {
                         width: calc(100% - 47px );
                         width: 100%;
                     }
