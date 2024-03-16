@@ -17,7 +17,7 @@
                 display: inline-flex;
                 align-items: center;
                 cursor: pointer;
-                z-index: -1;
+                z-index: 0;
                 position: relative;
                 @media screen and (max-width:1023px) {
                   padding: 60px 30px;
@@ -32,42 +32,38 @@
                   align-items: start;
                   justify-content: center;
                 }
-                &:nth-child(4n+2)::before,
-                &:nth-child(4n+3)::before{
-                    content: '';
-                    border-radius: 30px;
-                    border: 2px solid transparent;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    mask-composite: exclude;
-                    z-index: -1;
+                & i{
+                  content: '';
+                  border-radius: 30px;
+                  border: 2px solid transparent;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  mask-composite: exclude;
+                  z-index: -1;
+                }
+                
+                &:nth-child(4n+2),
+                &:nth-child(4n+3){
+                  & i{
                     mask-image: linear-gradient(134deg, transparent 5%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 74%, transparent 95%);
                     background: linear-gradient($--black, $--black) padding-box,
                     linear-gradient(to left, #0D0D0D -65%, #5A5A5E 100%,#0D0D0D 100% ) border-box;
                   }
+                }
 
-                  &:nth-of-type(4n+1)::before,
-                  &:nth-of-type(4n)::before{
-                    z-index: -1;
-                    content: '';
-                    border-radius: 30px;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 0;
-                    border: 2px solid transparent;
-                    mask-composite: exclude;
+                  &:nth-of-type(4n+1),
+                  &:nth-of-type(4n){
+                    & i {
                     mask-image: linear-gradient(212deg, transparent 5%, rgba(0, 0, 0, 1) 71%, rgba(0, 0, 0, 1) 74%, transparent 95%);              
                     background: linear-gradient($--black, $--black) padding-box,
                     linear-gradient(to right, #0D0D0D -19%, #5A5A5E 100%,#0D0D0D 100% ) border-box;
-                  }
+     
+                   }
+             }
                   &-content{
-                    z-index: 1;
                     & h3{
                       margin-bottom: 20px;
                     }
