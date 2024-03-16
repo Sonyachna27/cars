@@ -112,25 +112,21 @@
                   & p{
                     max-width: 530px;
                     font-weight: 500;
-                    @media screen and (max-width:367px) {
-                      font-size: 14px;
-                    }
+                    
                   }
                   @media screen and (max-width:767px) {
                     padding: 20px;
                     padding: 30px 74px;
-                    font-size: 20px;
+                    font-size: 16px;
                   }
                   @media screen and (max-width:367px) {
-                    padding: 10px;
-                    font-size: 16px;
+                    padding: 20px 45px;
+                    font-size: 14px;
                   }
                 }
                 .faq__container-accord-item:hover .faq__container-accord-item-top svg line{
                   stroke: $--white;
                 }
-         
-        
                 .faq__container-accord-item.active  .faq__container-accord-item-top svg {
               transform: rotate(45deg);
                 }

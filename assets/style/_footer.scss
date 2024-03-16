@@ -1,39 +1,50 @@
 .footer{
     margin-bottom: 30px;
     &__container{
-        padding: 0 90px;
+        
+        padding: 90px 90px 30px 90px;
         @media screen and (max-width:1240px) {
             padding: 0 60px;
+            padding: 30px 60px;
         }
         @media screen and (max-width:1023px) {
             padding: 0 30px;
+            padding: 30px;
         }
-        @media screen and (max-width:767px) {
-            padding: 0 10px;
+       position: relative;
+        overflow: hidden;
+        z-index: 0;
+
+        & i{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border-radius: 30px;
+            padding: 2px; 
+            -webkit-mask: 
+               linear-gradient(#fff 0 0) content-box, 
+               linear-gradient(#fff 0 0); 
+            -webkit-mask-composite: xor; 
+            mask-composite: exclude; 
+            background: linear-gradient(104.47deg, rgba(13, 13, 13, 0) 0.46%, #5A5A5E 49.23%, rgba(13, 13, 13, 0) 100%) border-box;
+            background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
         }
-        
-         
+          
             &-wrap{
                gap: 60px;
                     display: flex;
                     flex-direction: column;
-                    padding: 80px 0 60px 0;
+                    margin-bottom: 60px;
                     position: relative;
                     @media screen and (max-width:1240px) {
-                        padding: 60px 0;
+                        margin-bottom: 60px;
                     }
                     @media screen and (max-width:767px) {
-                        padding: 30px 0px;
+                        margin-bottom: 40px;
+                        gap: 40px;
                     }
-                        &:before{
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            width: 100%;
-                            height: 1px;
-                            top: 0;
-                            background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
-                        }
+                     
 
                &-links{
                 display: flex;
@@ -42,12 +53,14 @@
                 justify-content: space-between;
                 @media screen and (max-width:1023px) {
                    flex-direction: column; 
-                   gap: 30px;
-                   align-items: center;
+                   gap: 40px;
                 }
                 & .logo{
                     max-width: 160px;
                     width: 100%;
+                    @media screen and (max-width:1023px) {
+                        margin: 0 auto;
+                    }
                 }
                 & span{
                     font-size: 20px;
@@ -63,7 +76,7 @@
                     }
                     @media screen and (max-width:1023px) {
                         flex-direction: column; 
-                        gap: 30px;
+                        
                      }
                 }
                 &-item{
@@ -75,7 +88,7 @@
                     word-break: break-word;
                    }
                    @media screen and (max-width:1023px) {
-                    align-items: center;
+                    gap: 20px;
                    }
                     &-contacts{
                         align-items: baseline;
@@ -87,20 +100,23 @@
                     & svg{
                         min-width: 47px;
                         min-height: 47px;
-                        @media screen and (max-width:367px) {
-                            min-width: 37px;
-                            min-height: 37px;
+                        @media screen and (max-width:550px) {
+                            min-width: 32px;
+                            min-height: 32px;
+                            max-width: 32px;
+                            max-height: 32px;
                         }
                     }
                     @media screen and (max-width:1200px) {
                         font-size: 22px;
                     }
                     @media screen and (max-width:1023px) {
-                        align-items: center;
+                        gap: 10px;
+                        font-size: 16px;
                     }
                     }
                     & nav{
-                        margin: 0 auto;
+                        // margin: 0 auto;
                         & ul{
                             display: flex;
                             flex-direction: column;
@@ -117,9 +133,7 @@
                                     }
                                 }
                             }
-                            @media screen and (max-width:1023px) {
-                                align-items: center;
-                               }
+                          
                         }
                     }
                 }
@@ -128,7 +142,9 @@
                 @media screen and (max-width:1023px) {
                     flex-direction: column;
                     align-items: baseline;
+                    
                 }
+             
                 .circle{
                     width: calc(33% - 47px );
                     @media screen and (max-width:1023px) {
@@ -144,12 +160,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 30px 0;
+            padding: 30px  0 0 0;
             position: relative;
+            font-size: 14px;
             @media screen and (max-width:1023px) {
                 text-align: center;
+                padding: 20px 0 0 0;
             }
-            &:before,
+         
             &:after{
                 content: '';
                 position: absolute;
@@ -158,12 +176,10 @@
                 height: 1px;
                 background: linear-gradient(90deg, #0D0D0D 0%, #5A5A5E 49%, #0D0D0D 100%);
             }
-            &::before{
+            &::after{
                 top: 0;
             }
-            &::after{
-                bottom: 0;
-            }
+            
         }
     }
 }
